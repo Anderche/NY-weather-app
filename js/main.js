@@ -39,6 +39,11 @@ if (weatherForecast.status === 200){
 	var date_raw = fObj.list[0].dt_txt;
 	date_raw = date_raw.substring(5,11);
 	document.getElementById('r1c1').innerHTML=date_raw;
+
+	var icon_code = fObj.list[0].weather[0].icon;
+	var icon_path = "http://openweathermap.org/img/w/"+icon_code+".png";
+	document.getElementById('r1c2').src=icon_path;	
+
 } //end if
 }; //end function
 
