@@ -36,6 +36,7 @@ if (weatherForecast.status === 200){
 	fObj = JSON.parse(weatherForecast.responseText);
 	console.log(fObj);
 
+	// DAY 01
 	// DATE in format M-DD
 	var date_raw = fObj.list[0].dt_txt;
 	date_raw = date_raw.substring(5,11);
@@ -50,6 +51,35 @@ if (weatherForecast.status === 200){
 	document.getElementById('r1c3').innerHTML = fObj.list[0].main.temp_min+"&deg";
 	document.getElementById('r1c4').innerHTML = fObj.list[0].main.temp_max+"&deg";
 
+	// DAY 02
+	// DATE in format M-DD
+	var date_raw = fObj.list[8].dt_txt;
+	date_raw = date_raw.substring(5,11);
+	document.getElementById('r2c1').innerHTML=date_raw;
+
+	// WEATHER ICON
+	var icon_code = fObj.list[8].weather[0].icon;
+	var icon_path = "http://openweathermap.org/img/w/"+icon_code+".png";
+	document.getElementById('r2c2').src=icon_path;	
+
+	// TEMPERATURE MINIMUM
+	document.getElementById('r2c3').innerHTML = fObj.list[8].main.temp_min+"&deg";
+	document.getElementById('r2c4').innerHTML = fObj.list[8].main.temp_max+"&deg";
+	
+	// DAY 03
+	// DATE in format M-DD
+	var date_raw = fObj.list[16].dt_txt;
+	date_raw = date_raw.substring(5,11);
+	document.getElementById('r3c1').innerHTML=date_raw;
+
+	// WEATHER ICON
+	var icon_code = fObj.list[16].weather[0].icon;
+	var icon_path = "http://openweathermap.org/img/w/"+icon_code+".png";
+	document.getElementById('r3c2').src=icon_path;	
+
+	// TEMPERATURE MINIMUM
+	document.getElementById('r3c3').innerHTML = fObj.list[16].main.temp_min+"&deg";
+	document.getElementById('r3c4').innerHTML = fObj.list[16].main.temp_max+"&deg";
 
 	// TEMPERATURE MAXIMUM
 
