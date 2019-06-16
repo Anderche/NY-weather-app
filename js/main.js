@@ -15,7 +15,10 @@ weatherConditions.onload = function() {
     if (weatherConditions.status === 200){
         cObj = JSON.parse(weatherConditions.responseText); 
         console.log(cObj);
-
+				document.getElementById('location').innerHTML = cObj.name;
+				document.getElementById('weather').innerHTML = cObj.weather[0].description;
+				document.getElementById('temperature').innerHTML = cObj.main.temp;
+				document.getElementById('desc').innerHTML = "Wind Speed: "+cObj.wind.speed;
 
     } //end if
 }; //end function
@@ -25,7 +28,7 @@ weatherConditions.onload = function() {
 
 
 
-
+ 
 
 
 
