@@ -14,7 +14,7 @@ weatherConditions.send(null);
 weatherConditions.onload = function() {
     if (weatherConditions.status === 200){
         cObj = JSON.parse(weatherConditions.responseText); 
-        console.log(cObj);
+        // console.log(cObj);
 				document.getElementById('location').innerHTML = cObj.name;
 				document.getElementById('weather').innerHTML = cObj.weather[0].description;
 				document.getElementById('temperature').innerHTML = cObj.main.temp;
@@ -35,8 +35,20 @@ weatherForecast.onload = function() {
 if (weatherForecast.status === 200){
 	fObj = JSON.parse(weatherForecast.responseText);
 	console.log(fObj);
-	
+
+	var date_raw = fObj.list[0].dt_txt;
+	date_raw = date_raw.substring(5,11);
+	document.getElementById('r1c1').innerHTML=date_raw;
 } //end if
 }; //end function
+
+
+
+
+
+
+
+
+
 
 
