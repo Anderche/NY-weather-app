@@ -17,7 +17,7 @@ weatherConditions.onload = function() {
         // console.log(cObj);
 				document.getElementById('location').innerHTML = cObj.name;
 				document.getElementById('weather').innerHTML = cObj.weather[0].description;
-				document.getElementById('temperature').innerHTML = cObj.main.temp;
+				document.getElementById('temperature').innerHTML = cObj.main.temp+"&deg F";
 				document.getElementById('desc').innerHTML = "Wind Speed: "+cObj.wind.speed;
 
     } //end if
@@ -49,7 +49,7 @@ if (weatherForecast.status === 200){
 
 	// TEMPERATURE MINIMUM
 	document.getElementById('r1c3').innerHTML = fObj.list[0].main.temp_min+"&deg";
-	document.getElementById('r1c4').innerHTML = fObj.list[0].main.temp_max+"&deg";
+	document.getElementById('r1c4').innerHTML = fObj.list[0].main.temp_max+"&deg F";
 
 	// DAY 02
 	// DATE in format M-DD
@@ -64,7 +64,7 @@ if (weatherForecast.status === 200){
 
 	// TEMPERATURE MINIMUM
 	document.getElementById('r2c3').innerHTML = fObj.list[8].main.temp_min+"&deg";
-	document.getElementById('r2c4').innerHTML = fObj.list[8].main.temp_max+"&deg";
+	document.getElementById('r2c4').innerHTML = fObj.list[8].main.temp_max+"&deg F";
 	
 	// DAY 03
 	// DATE in format M-DD
@@ -79,7 +79,7 @@ if (weatherForecast.status === 200){
 
 	// TEMPERATURE MINIMUM
 	document.getElementById('r3c3').innerHTML = fObj.list[16].main.temp_min+"&deg";
-	document.getElementById('r3c4').innerHTML = fObj.list[16].main.temp_max+"&deg";
+	document.getElementById('r3c4').innerHTML = fObj.list[16].main.temp_max+"&deg F";
 
 	// TEMPERATURE MAXIMUM
 
