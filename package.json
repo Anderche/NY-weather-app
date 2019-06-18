@@ -1,0 +1,22 @@
+{
+  "name": "weather-app",
+  "version": "1.0.0",
+  "description": "Ever wonder what the 3-day forecast is for Red Hook, Brooklyn, New York, United States of America??? ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Anderche/NY-weather-app.git"
+  },
+  "author": "Anders Kiss",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Anderche/NY-weather-app/issues"
+  },
+  "engines": {
+    "node": "12.3.1"
+  },
+  "homepage": "https://github.com/Anderche/NY-weather-app#readme"
+}
