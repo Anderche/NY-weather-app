@@ -27,7 +27,7 @@ weatherConditions.onload = function() {
 
 
 // GET THE FORECARST
-weatherForecast.open('GET', 'http://api.openweathermap.org/data/2.5/forecast?zip=11201,us&appid=aef5130a1d6508e4812ab49cf12ccc68&units=imperial', true);
+weatherForecast.open('GET', 'http://api.openweathermap.org/data/2.5/forecast?zip=11231,us&appid=aef5130a1d6508e4812ab49cf12ccc68&units=imperial', true);
 weatherForecast.responseType = 'text'; 
 weatherForecast.send();
 
