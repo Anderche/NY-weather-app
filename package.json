@@ -4,7 +4,8 @@
   "description": "Ever wonder what the 3-day forecast is for Red Hook, Brooklyn, New York, United States of America??? ",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
